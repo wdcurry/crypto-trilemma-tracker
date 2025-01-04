@@ -87,7 +87,7 @@ export const blockchainData: BlockchainScore[] = [
     tps: 83,  // ~1,500-2,000 TPS sustained
     finalityTime: 90, // ~2-3 seconds
     activeValidators: 80, // 100 active validators as of March 2024
-    logo: "https://cryptologos.cc/logos/near-protocol-near-logo.svg"
+    logo: "/crypto-trilemma-tracker/near-protocol-near-logo.svg"
   },
   {
     id: "algorand",
@@ -98,7 +98,7 @@ export const blockchainData: BlockchainScore[] = [
     tps: 82,  // ~1,000-1,200 TPS sustained
     finalityTime: 93, // ~4.5 seconds
     activeValidators: 81, // 120+ participation nodes as of March 2024
-    logo: "https://cryptologos.cc/logos/algorand-algo-logo.svg"
+    logo: "/crypto-trilemma-tracker/algorand-algo-logo.svg"
   },
   {
     id: "tezos",
