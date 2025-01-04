@@ -8,7 +8,7 @@ export const blockchainData: BlockchainScore[] = [
     security: 92, // Multiple security audits, no major incidents
     scalability: 95, // Adaptive State Sharding
     tps: 100,  // ~45,000 TPS with three shards
-    finalityTime: 96,  // ~6 seconds finality
+    finalityTime: 96,  // ~6 seconds
     activeValidators: 92, // 3,256 validators as of March 2024 (maximum allowed)
     logo: "/crypto-trilemma-tracker/lovable-uploads/5c6c5669-5ca8-4fbb-9982-4334e1d084f8.png"
   },
@@ -87,7 +87,7 @@ export const blockchainData: BlockchainScore[] = [
     tps: 83,  // ~1,500-2,000 TPS sustained
     finalityTime: 90, // ~2-3 seconds
     activeValidators: 80, // 100 active validators as of March 2024
-    logo: "/crypto-trilemma-tracker/near-protocol-near-logo.svg"
+    logo: "https://cryptologos.cc/logos/near-protocol-near-logo.svg"
   },
   {
     id: "algorand",
@@ -98,7 +98,7 @@ export const blockchainData: BlockchainScore[] = [
     tps: 82,  // ~1,000-1,200 TPS sustained
     finalityTime: 93, // ~4.5 seconds
     activeValidators: 81, // 120+ participation nodes as of March 2024
-    logo: "/crypto-trilemma-tracker/algorand-algo-logo.svg"
+    logo: "https://cryptologos.cc/logos/algorand-algo-logo.svg"
   },
   {
     id: "tezos",
