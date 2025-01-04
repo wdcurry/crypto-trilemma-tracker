@@ -4,111 +4,111 @@ export const blockchainData: BlockchainScore[] = [
   {
     id: "multiversx",
     name: "MultiversX",
-    decentralization: 92,
-    security: 95,
-    scalability: 98,
-    tps: 100,  // ~15,000 TPS in testing, but real-world sustained is lower
-    finalityTime: 98,  // ~6 seconds finality
-    activeValidators: 88,
+    decentralization: 85, // 3200+ validators, good geographic distribution
+    security: 92, // Multiple security audits, no major incidents
+    scalability: 95, // Adaptive State Sharding
+    tps: 100,  // ~15,000 TPS in testing, real-world sustained ~5,700 TPS
+    finalityTime: 96,  // ~6 seconds finality
+    activeValidators: 82, // ~3,200 validators
     logo: "/lovable-uploads/5c6c5669-5ca8-4fbb-9982-4334e1d084f8.png"
   },
   {
     id: "ethereum",
     name: "Ethereum",
-    decentralization: 95,
-    security: 98,
-    scalability: 75,
+    decentralization: 98, // Highest number of nodes (~500,000)
+    security: 98, // Longest track record, highest security budget
+    scalability: 70, // Limited by L1, improved by L2 solutions
     tps: 30,  // ~15-30 TPS on mainnet
-    finalityTime: 85,
-    activeValidators: 98,
+    finalityTime: 82, // ~12-15 minutes for full finality
+    activeValidators: 100, // ~500,000+ validators
     logo: "https://cryptologos.cc/logos/ethereum-eth-logo.svg"
   },
   {
     id: "solana",
     name: "Solana",
-    decentralization: 78,
-    security: 85,
-    scalability: 99,
-    tps: 95,  // ~3,000-4,000 TPS sustained, theoretical max much higher
+    decentralization: 75, // ~1,700 validators, more centralized
+    security: 80, // Multiple outages historically
+    scalability: 98, // High throughput architecture
+    tps: 95,  // ~3,000-4,000 TPS sustained, peaks at 50,000+ TPS
     finalityTime: 99,  // ~400ms finality
-    activeValidators: 82,
+    activeValidators: 75, // ~1,700 validators
     logo: "https://cryptologos.cc/logos/solana-sol-logo.svg"
   },
   {
     id: "cardano",
     name: "Cardano",
-    decentralization: 90,
-    security: 96,
-    scalability: 82,
+    decentralization: 90, // ~3,000 stake pools
+    security: 95, // Formal verification, peer-reviewed
+    scalability: 80, // Hydra scaling solution
     tps: 75,  // ~250-270 TPS sustained
-    finalityTime: 88,
-    activeValidators: 92,
+    finalityTime: 85, // ~20 blocks (~20 minutes)
+    activeValidators: 90, // ~3,000 stake pools
     logo: "https://cryptologos.cc/logos/cardano-ada-logo.svg"
   },
   {
     id: "polkadot",
     name: "Polkadot",
-    decentralization: 88,
-    security: 92,
-    scalability: 90,
+    decentralization: 85, // ~297 validators
+    security: 90, // Shared security model
+    scalability: 88, // Parallel processing via parachains
     tps: 80,  // ~1,000 TPS with parachains
-    finalityTime: 87,
-    activeValidators: 85,
+    finalityTime: 85, // ~12-60 seconds
+    activeValidators: 80, // ~297 validators
     logo: "https://cryptologos.cc/logos/polkadot-new-dot-logo.svg"
   },
   {
     id: "avalanche",
     name: "Avalanche",
-    decentralization: 85,
-    security: 93,
-    scalability: 95,
+    decentralization: 82, // ~1,200 validators
+    security: 88, // Snow protocol
+    scalability: 92, // Subnets architecture
     tps: 85,  // ~4,500 TPS sustained
-    finalityTime: 93,
-    activeValidators: 84,
+    finalityTime: 95, // ~2 seconds
+    activeValidators: 85, // ~1,200 validators
     logo: "https://cryptologos.cc/logos/avalanche-avax-logo.svg"
   },
   {
     id: "cosmos",
     name: "Cosmos",
-    decentralization: 89,
-    security: 91,
-    scalability: 88,
+    decentralization: 88, // Independent zones
+    security: 85, // Zone-specific security
+    scalability: 90, // Independent parallel chains
     tps: 78,  // ~1,000 TPS per chain
-    finalityTime: 86,
-    activeValidators: 88,
+    finalityTime: 86, // ~6-7 seconds
+    activeValidators: 85, // Varies by zone, ~175 on Hub
     logo: "https://cryptologos.cc/logos/cosmos-atom-logo.svg"
   },
   {
     id: "near",
     name: "NEAR Protocol",
-    decentralization: 86,
-    security: 90,
-    scalability: 94,
+    decentralization: 80, // ~100 validators
+    security: 85, // Nightshade sharding
+    scalability: 92, // Dynamic sharding
     tps: 83,  // ~1,500-2,000 TPS sustained
-    finalityTime: 89,
-    activeValidators: 83,
+    finalityTime: 90, // ~2-3 seconds
+    activeValidators: 75, // ~100 validators
     logo: "https://cryptologos.cc/logos/near-protocol-near-logo.svg"
   },
   {
     id: "algorand",
     name: "Algorand",
-    decentralization: 87,
-    security: 94,
-    scalability: 91,
+    decentralization: 82, // Pure PoS
+    security: 90, // Byzantine agreement
+    scalability: 88, // State Proofs
     tps: 82,  // ~1,000-1,200 TPS sustained
-    finalityTime: 92,
-    activeValidators: 85,
+    finalityTime: 93, // ~4.5 seconds
+    activeValidators: 80, // ~120 participation nodes
     logo: "https://cryptologos.cc/logos/algorand-algo-logo.svg"
   },
   {
     id: "tezos",
     name: "Tezos",
-    decentralization: 88,
-    security: 93,
-    scalability: 85,
+    decentralization: 85, // ~400+ bakers
+    security: 88, // Formal verification
+    scalability: 80, // Optimistic rollups
     tps: 70,  // ~40-50 TPS sustained
-    finalityTime: 85,
-    activeValidators: 87,
+    finalityTime: 83, // ~30 minutes
+    activeValidators: 82, // ~400+ bakers
     logo: "https://cryptologos.cc/logos/tezos-xtz-logo.svg"
   }
 ];
