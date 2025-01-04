@@ -4,24 +4,24 @@
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 252 82% 75%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 222 47% 11%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 174 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 4%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 273 68% 50%;
-    --accent-foreground: 0 0% 100%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 252 82% 75%;
-    --radius: 1rem;
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 174 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 174 100% 50%;
+    --radius: 0.5rem;
   }
 }
 
@@ -30,15 +30,15 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    background: linear-gradient(to bottom, #FFFFFF, #F8F9FF);
+    @apply bg-secondary text-foreground;
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000000 100%);
   }
 }
 
 .glass-card {
-  @apply bg-white/90 backdrop-blur-sm border border-primary/10 shadow-lg hover:shadow-primary/5 transition-all duration-300;
+  @apply bg-black/40 backdrop-blur-sm border border-primary/10 shadow-lg hover:shadow-primary/20 transition-all duration-300;
 }
 
 .score-bar {
-  @apply h-2 rounded-full bg-gradient-to-r from-primary-light to-primary transition-all duration-500 ease-out;
+  @apply h-2 rounded-full bg-gradient-to-r from-primary-dark to-primary transition-all duration-500 ease-out;
 }

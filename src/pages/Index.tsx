@@ -34,14 +34,14 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-[#F8F9FF] p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#1a1a1a_0%,#000000_100%)] p-8">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Blockchain Analysis
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+            The Internet-Scale Blockchain
           </h1>
-          <p className="text-lg text-muted max-w-2xl mx-auto mb-12">
-            Compare blockchain platforms across the crypto trilemma metrics
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+            Compare blockchain platforms across the crypto trilemma metrics: decentralization, security, and scalability
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
