@@ -9,7 +9,7 @@ export const blockchainData: BlockchainScore[] = [
     scalability: 95, // Adaptive State Sharding
     tps: 100,  // ~15,000 TPS in testing, real-world sustained ~5,700 TPS
     finalityTime: 96,  // ~6 seconds finality
-    activeValidators: 92, // 3,200+ validators as of 2024
+    activeValidators: 90, // 3,200+ validators as of 2024
     logo: "/lovable-uploads/5c6c5669-5ca8-4fbb-9982-4334e1d084f8.png"
   },
   {
@@ -42,7 +42,7 @@ export const blockchainData: BlockchainScore[] = [
     scalability: 80, // Hydra scaling solution
     tps: 75,  // ~250-270 TPS sustained
     finalityTime: 85, // ~20 blocks (~20 minutes)
-    activeValidators: 88, // 3,223 stake pools as of March 2024
+    activeValidators: 91, // 3,223 stake pools as of March 2024
     logo: "https://cryptologos.cc/logos/cardano-ada-logo.svg"
   },
   {
@@ -64,7 +64,7 @@ export const blockchainData: BlockchainScore[] = [
     scalability: 92, // Subnets architecture
     tps: 85,  // ~4,500 TPS sustained
     finalityTime: 95, // ~2 seconds
-    activeValidators: 87, // 1,498 active validators as of March 2024
+    activeValidators: 75, // 1,498 active validators as of March 2024
     logo: "https://cryptologos.cc/logos/avalanche-avax-logo.svg"
   },
   {
