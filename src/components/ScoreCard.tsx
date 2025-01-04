@@ -10,7 +10,20 @@ export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) =>
   const getTotalScore = () => {
     return selectedCategories.reduce((acc, category) => {
       return acc + blockchain[category];
-    }, 0) / selectedCategories.length;
+    }, 0);
+  };
+
+  const getCategoryDisplayName = (category: ScoreCategory): string => {
+    switch (category) {
+      case "tps":
+        return "TPS";
+      case "finalityTime":
+        return "Finality Time";
+      case "activeValidators":
+        return "Active Validators";
+      default:
+        return category.charAt(0).toUpperCase() + category.slice(1);
+    }
   };
 
   return (
@@ -24,56 +37,26 @@ export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) =>
         <div>
           <h3 className="font-semibold text-lg">{blockchain.name}</h3>
           <p className="text-sm text-muted-foreground">
-            Score: {getTotalScore().toFixed(1)}
+            Total Score: {getTotalScore()}
           </p>
         </div>
       </div>
 
       <div className="space-y-4">
-        {selectedCategories.includes("decentralization") && (
-          <div>
+        {selectedCategories.map((category) => (
+          <div key={category}>
             <div className="flex justify-between mb-1">
-              <span className="text-sm">Decentralization</span>
-              <span className="text-sm font-medium">{blockchain.decentralization}</span>
+              <span className="text-sm">{getCategoryDisplayName(category)}</span>
+              <span className="text-sm font-medium">{blockchain[category]}</span>
             </div>
             <div className="bg-secondary rounded-full">
               <div
                 className="score-bar"
-                style={{ width: `${blockchain.decentralization}%` }}
+                style={{ width: `${blockchain[category]}%` }}
               />
             </div>
           </div>
-        )}
-
-        {selectedCategories.includes("security") && (
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm">Security</span>
-              <span className="text-sm font-medium">{blockchain.security}</span>
-            </div>
-            <div className="bg-secondary rounded-full">
-              <div
-                className="score-bar"
-                style={{ width: `${blockchain.security}%` }}
-              />
-            </div>
-          </div>
-        )}
-
-        {selectedCategories.includes("scalability") && (
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm">Scalability</span>
-              <span className="text-sm font-medium">{blockchain.scalability}</span>
-            </div>
-            <div className="bg-secondary rounded-full">
-              <div
-                className="score-bar"
-                style={{ width: `${blockchain.scalability}%` }}
-              />
-            </div>
-          </div>
-        )}
+        ))}
       </div>
     </div>
   );

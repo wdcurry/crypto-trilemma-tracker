@@ -13,12 +13,8 @@ const Index = () => {
 
   const sortedBlockchains = useMemo(() => {
     return [...blockchainData].sort((a, b) => {
-      const aScore =
-        selectedCategories.reduce((acc, category) => acc + a[category], 0) /
-        selectedCategories.length;
-      const bScore =
-        selectedCategories.reduce((acc, category) => acc + b[category], 0) /
-        selectedCategories.length;
+      const aScore = selectedCategories.reduce((acc, category) => acc + a[category], 0);
+      const bScore = selectedCategories.reduce((acc, category) => acc + b[category], 0);
       return bScore - aScore;
     });
   }, [selectedCategories]);
@@ -33,6 +29,28 @@ const Index = () => {
     });
   };
 
+  const categories: ScoreCategory[] = [
+    "decentralization",
+    "security",
+    "scalability",
+    "tps",
+    "finalityTime",
+    "activeValidators"
+  ];
+
+  const getCategoryDisplayName = (category: ScoreCategory): string => {
+    switch (category) {
+      case "tps":
+        return "TPS";
+      case "finalityTime":
+        return "Finality Time";
+      case "activeValidators":
+        return "Active Validators";
+      default:
+        return category.charAt(0).toUpperCase() + category.slice(1);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#1a1a1a_0%,#000000_100%)] p-8">
       <div className="max-w-7xl mx-auto">
@@ -41,25 +59,19 @@ const Index = () => {
             The Internet-Scale Blockchain
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-            Compare blockchain platforms across the crypto trilemma metrics: decentralization, security, and scalability
+            Compare blockchain platforms across key performance metrics
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <CategoryToggle
-              category="decentralization"
-              isSelected={selectedCategories.includes("decentralization")}
-              onToggle={toggleCategory}
-            />
-            <CategoryToggle
-              category="security"
-              isSelected={selectedCategories.includes("security")}
-              onToggle={toggleCategory}
-            />
-            <CategoryToggle
-              category="scalability"
-              isSelected={selectedCategories.includes("scalability")}
-              onToggle={toggleCategory}
-            />
+            {categories.map((category) => (
+              <CategoryToggle
+                key={category}
+                category={category}
+                displayName={getCategoryDisplayName(category)}
+                isSelected={selectedCategories.includes(category)}
+                onToggle={toggleCategory}
+              />
+            ))}
           </div>
         </div>
 

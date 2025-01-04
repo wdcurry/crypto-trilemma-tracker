@@ -4,12 +4,14 @@ import { cn } from "@/lib/utils";
 
 interface CategoryToggleProps {
   category: ScoreCategory;
+  displayName: string;
   isSelected: boolean;
   onToggle: (category: ScoreCategory) => void;
 }
 
 export const CategoryToggle = ({
   category,
+  displayName,
   isSelected,
   onToggle,
 }: CategoryToggleProps) => {
@@ -22,7 +24,7 @@ export const CategoryToggle = ({
       )}
       onClick={() => onToggle(category)}
     >
-      {category.charAt(0).toUpperCase() + category.slice(1)}
+      {displayName}
     </Button>
   );
 };
