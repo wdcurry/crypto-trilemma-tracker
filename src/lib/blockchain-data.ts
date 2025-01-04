@@ -8,7 +8,7 @@ export const blockchainData: BlockchainScore[] = [
     security: 95,
     scalability: 98,
     tps: 95,
-    finalityTime: 90,
+    finalityTime: 98,  // ~6 seconds finality
     activeValidators: 88,
     logo: "/lovable-uploads/5c6c5669-5ca8-4fbb-9982-4334e1d084f8.png"
   },
@@ -30,7 +30,7 @@ export const blockchainData: BlockchainScore[] = [
     security: 85,
     scalability: 99,
     tps: 99,
-    finalityTime: 95,
+    finalityTime: 99,  // ~400ms finality
     activeValidators: 82,
     logo: "https://cryptologos.cc/logos/solana-sol-logo.svg"
   },
