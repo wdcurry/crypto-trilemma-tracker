@@ -3,6 +3,9 @@ import { ScoreCard } from "@/components/ScoreCard";
 import { CategoryToggle } from "@/components/CategoryToggle";
 import { blockchainData } from "@/lib/blockchain-data";
 import { ScoreCategory } from "@/lib/types";
+import { Button } from "@/components/ui/button";
+import { RefreshCw } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
   const [selectedCategories, setSelectedCategories] = useState<ScoreCategory[]>([
@@ -10,6 +13,16 @@ const Index = () => {
     "security",
     "scalability",
   ]);
+  const [refreshKey, setRefreshKey] = useState(0);
+  const { toast } = useToast();
+
+  const handleRefresh = () => {
+    setRefreshKey(prev => prev + 1);
+    toast({
+      title: "Data Refreshed",
+      description: "The blockchain metrics have been updated.",
+    });
+  };
 
   const sortedBlockchains = useMemo(() => {
     return [...blockchainData].sort((a, b) => {
@@ -17,7 +30,7 @@ const Index = () => {
       const bScore = selectedCategories.reduce((acc, category) => acc + b[category], 0);
       return bScore - aScore;
     });
-  }, [selectedCategories]);
+  }, [selectedCategories, refreshKey]);
 
   const toggleCategory = (category: ScoreCategory) => {
     setSelectedCategories((prev) => {
@@ -78,6 +91,16 @@ const Index = () => {
     <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#1a1a1a_0%,#000000_100%)] p-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
+          <div className="flex justify-end mb-4">
+            <Button 
+              onClick={handleRefresh}
+              variant="outline"
+              className="gap-2"
+            >
+              <RefreshCw className="h-4 w-4" />
+              Refresh Data
+            </Button>
+          </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
             The Internet-Scale Blockchain
           </h1>
@@ -104,7 +127,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sortedBlockchains.map((blockchain) => (
             <ScoreCard
-              key={blockchain.id}
+              key={`${blockchain.id}-${refreshKey}`}
               blockchain={blockchain}
               selectedCategories={selectedCategories}
             />

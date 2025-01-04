@@ -1,5 +1,6 @@
 import { BlockchainScore, ScoreCategory } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 interface ScoreCardProps {
   blockchain: BlockchainScore;
@@ -7,6 +8,8 @@ interface ScoreCardProps {
 }
 
 export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) => {
+  const [imgError, setImgError] = useState(false);
+
   const getTotalScore = () => {
     return selectedCategories.reduce((acc, category) => {
       return acc + blockchain[category];
@@ -26,13 +29,18 @@ export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) =>
     }
   };
 
+  const handleImageError = () => {
+    setImgError(true);
+  };
+
   return (
     <div className="glass-card rounded-xl p-6 transition-all duration-300 hover:animate-card-hover">
       <div className="flex items-center gap-4 mb-4">
         <img
-          src={blockchain.logo}
+          src={imgError ? "/crypto-trilemma-tracker/placeholder.svg" : blockchain.logo}
           alt={`${blockchain.name} logo`}
-          className="w-12 h-12 rounded-full"
+          className="w-12 h-12 rounded-full object-contain bg-white/10"
+          onError={handleImageError}
         />
         <div>
           <h3 className="font-semibold text-lg">{blockchain.name}</h3>
