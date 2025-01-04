@@ -43,7 +43,14 @@ export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) =>
           onError={handleImageError}
         />
         <div>
-          <h3 className="font-semibold text-lg">{blockchain.name}</h3>
+          <a
+            href={blockchain.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-lg hover:text-primary transition-colors"
+          >
+            {blockchain.name}
+          </a>
           <p className="text-sm text-muted-foreground">
             Total Score: {getTotalScore()}
           </p>

@@ -1,3 +1,5 @@
+export type ScoreCategory = "decentralization" | "security" | "scalability" | "tps" | "finalityTime" | "activeValidators";
+
 export interface BlockchainScore {
   id: string;
   name: string;
@@ -8,12 +10,5 @@ export interface BlockchainScore {
   finalityTime: number;
   activeValidators: number;
   logo: string;
+  website: string;
 }
-
-export type ScoreCategory = 
-  | 'decentralization' 
-  | 'security' 
-  | 'scalability' 
-  | 'tps' 
-  | 'finalityTime' 
-  | 'activeValidators';
