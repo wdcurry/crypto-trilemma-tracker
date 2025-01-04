@@ -44,5 +44,5 @@
 }
 
 .score-bar-background {
-  @apply h-2 rounded-full bg-primary/5 backdrop-blur-sm;
+  @apply h-2 rounded-full bg-primary/5;
 }
