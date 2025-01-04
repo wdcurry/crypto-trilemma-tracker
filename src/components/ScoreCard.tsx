@@ -57,7 +57,7 @@ export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) =>
               <span className="text-sm">{getCategoryDisplayName(category)}</span>
               <span className="text-sm font-medium">{blockchain[category]}</span>
             </div>
-            <div className="bg-secondary rounded-full">
+            <div className="score-bar-background">
               <div
                 className="score-bar"
                 style={{ width: `${blockchain[category]}%` }}

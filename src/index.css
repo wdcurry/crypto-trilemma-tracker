@@ -42,3 +42,7 @@
 .score-bar {
   @apply h-2 rounded-full bg-gradient-to-r from-primary-dark to-primary transition-all duration-500 ease-out;
 }
+
+.score-bar-background {
+  @apply h-2 rounded-full bg-primary/5 backdrop-blur-sm;
+}
