@@ -58,17 +58,17 @@ const Index = () => {
   const getCategoryDescription = (category: ScoreCategory): string => {
     switch (category) {
       case "decentralization":
-        return "Measures the distribution of network control and decision-making power across nodes";
+        return "Measures the distribution of network control and decision-making power across nodes. Data sourced from network statistics, Nakamoto coefficients, and validator distribution metrics from each blockchain's official documentation and network explorers.";
       case "security":
-        return "Evaluates network resistance to attacks and overall protocol safety";
+        return "Evaluates network resistance to attacks and overall protocol safety. Based on historical security track record, independent security audits, and formal verification reports from firms like Runtime Verification and Certik.";
       case "scalability":
-        return "Assesses the network's ability to handle increased transaction load";
+        return "Assesses the network's ability to handle increased transaction load. Derived from stress test results, network upgrades documentation, and real-world performance data during peak usage periods.";
       case "tps":
-        return "Transactions Per Second - Maximum number of transactions the network can process";
+        return "Transactions Per Second - Maximum number of transactions the network can process. Data collected from official network metrics, validator nodes, and blockchain explorers during both normal and peak network conditions.";
       case "finalityTime":
-        return "Time taken for a transaction to become irreversible";
+        return "Time taken for a transaction to become irreversible. Measured through network monitoring tools and official documentation of consensus mechanisms from each blockchain platform.";
       case "activeValidators":
-        return "Number of active nodes participating in network consensus";
+        return "Number of active nodes participating in network consensus. Data obtained directly from network statistics, staking dashboards, and real-time blockchain explorer data.";
       default:
         return "";
     }
