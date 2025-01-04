@@ -7,7 +7,7 @@ export const blockchainData: BlockchainScore[] = [
     decentralization: 92,
     security: 95,
     scalability: 98,
-    logo: "https://raw.githubusercontent.com/multiversx/mx-assets/master/logos/x-dark.svg"
+    logo: "https://raw.githubusercontent.com/multiversx/mx-assets/master/logos/multiversx-x.svg"
   },
   {
     id: "ethereum",
@@ -15,7 +15,7 @@ export const blockchainData: BlockchainScore[] = [
     decentralization: 95,
     security: 98,
     scalability: 75,
-    logo: "https://raw.githubusercontent.com/ethereum/ethereum-org-website/master/src/assets/assets/eth-diamond-glyph.svg"
+    logo: "https://cryptologos.cc/logos/ethereum-eth-logo.svg"
   },
   {
     id: "solana",
