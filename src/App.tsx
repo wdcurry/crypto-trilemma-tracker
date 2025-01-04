@@ -12,7 +12,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/crypto-trilemma-tracker">
         <Routes>
           <Route path="/" element={<Index />} />
         </Routes>
