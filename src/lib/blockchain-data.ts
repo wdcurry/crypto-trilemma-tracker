@@ -7,7 +7,7 @@ export const blockchainData: BlockchainScore[] = [
     decentralization: 92,
     security: 95,
     scalability: 98,
-    logo: "https://cryptologos.cc/logos/elrond-egld-egld-logo.svg"
+    logo: "/lovable-uploads/5c6c5669-5ca8-4fbb-9982-4334e1d084f8.png"
   },
   {
     id: "ethereum",
