@@ -10,7 +10,7 @@ export const blockchainData: BlockchainScore[] = [
     tps: 100,  // ~45,000 TPS with three shards
     finalityTime: 96,  // ~6 seconds finality
     activeValidators: 92, // 3,256 validators as of March 2024 (maximum allowed)
-    logo: "/lovable-uploads/5c6c5669-5ca8-4fbb-9982-4334e1d084f8.png"
+    logo: "/crypto-trilemma-tracker/lovable-uploads/5c6c5669-5ca8-4fbb-9982-4334e1d084f8.png"
   },
   {
     id: "ethereum",
