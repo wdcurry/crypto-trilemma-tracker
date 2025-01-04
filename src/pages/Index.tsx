@@ -124,7 +124,7 @@ const Index = () => {
           
           <div className="text-center text-muted-foreground py-6 border-t border-muted">
             <p className="text-sm">
-              Made with ❤️ by the mofos at{" "}
+              Made with ❤️ by drew for the mofos at{" "}
               <a 
                 href="https://twitter.com/ApeStaking" 
                 target="_blank" 
