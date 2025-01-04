@@ -1,13 +1,15 @@
 import { BlockchainScore, ScoreCategory } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { Trophy, Medal, Award } from "lucide-react";
 
 interface ScoreCardProps {
   blockchain: BlockchainScore;
   selectedCategories: ScoreCategory[];
+  rank?: number;
 }
 
-export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) => {
+export const ScoreCard = ({ blockchain, selectedCategories, rank }: ScoreCardProps) => {
   const [imgError, setImgError] = useState(false);
 
   const getTotalScore = () => {
@@ -33,8 +35,42 @@ export const ScoreCard = ({ blockchain, selectedCategories }: ScoreCardProps) =>
     setImgError(true);
   };
 
+  const getRankBadge = () => {
+    if (!rank) return null;
+
+    const badgeClasses = "absolute -top-4 -right-4 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br shadow-lg transform transition-transform duration-300 hover:scale-110";
+
+    switch (rank) {
+      case 1:
+        return (
+          <div className={cn(badgeClasses, "from-yellow-400 to-yellow-600")}>
+            <Trophy className="w-6 h-6 text-white" />
+          </div>
+        );
+      case 2:
+        return (
+          <div className={cn(badgeClasses, "from-gray-300 to-gray-500")}>
+            <Medal className="w-6 h-6 text-white" />
+          </div>
+        );
+      case 3:
+        return (
+          <div className={cn(badgeClasses, "from-amber-600 to-amber-800")}>
+            <Award className="w-6 h-6 text-white" />
+          </div>
+        );
+      default:
+        return (
+          <div className={cn(badgeClasses, "from-primary/50 to-primary")}>
+            <span className="text-lg font-bold text-white">{rank}</span>
+          </div>
+        );
+    }
+  };
+
   return (
-    <div className="glass-card rounded-xl p-6 transition-all duration-300 hover:animate-card-hover">
+    <div className="glass-card rounded-xl p-6 transition-all duration-300 hover:animate-card-hover relative">
+      {getRankBadge()}
       <div className="flex items-center gap-4 mb-4">
         <img
           src={imgError ? "/crypto-trilemma-tracker/placeholder.svg" : blockchain.logo}

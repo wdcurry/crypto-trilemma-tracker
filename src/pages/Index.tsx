@@ -125,11 +125,12 @@ const Index = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedBlockchains.map((blockchain) => (
+          {sortedBlockchains.map((blockchain, index) => (
             <ScoreCard
               key={`${blockchain.id}-${refreshKey}`}
               blockchain={blockchain}
               selectedCategories={selectedCategories}
+              rank={index + 1}
             />
           ))}
         </div>
