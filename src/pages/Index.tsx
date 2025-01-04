@@ -113,13 +113,45 @@ const Index = () => {
 
         <footer className="mt-16 border-t border-muted pt-8">
           <h2 className="text-2xl font-semibold mb-6 text-center">Scoring Criteria Explained</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {categories.map((category) => (
               <div key={category} className="glass-card p-4 rounded-lg">
                 <h3 className="font-semibold mb-2">{getCategoryDisplayName(category)}</h3>
                 <p className="text-sm text-muted-foreground">{getCategoryDescription(category)}</p>
               </div>
             ))}
+          </div>
+          
+          <div className="text-center text-muted-foreground py-6 border-t border-muted">
+            <p className="text-sm">
+              Made with ❤️ by the mofos at{" "}
+              <a 
+                href="https://twitter.com/ApeStaking" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary hover:text-primary-light transition-colors"
+              >
+                @ApeStaking
+              </a>
+              ,{" "}
+              <a 
+                href="https://twitter.com/EGLDHeist" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary hover:text-primary-light transition-colors"
+              >
+                @EGLDHeist
+              </a>
+              , &{" "}
+              <a 
+                href="https://twitter.com/theFUCollective" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary hover:text-primary-light transition-colors"
+              >
+                @theFUCollective
+              </a>
+            </p>
           </div>
         </footer>
       </div>
