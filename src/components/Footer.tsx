@@ -20,7 +20,6 @@ export const Footer = () => {
     }
   };
 
-  // Generate Gravatar URL using MD5 hash of email
   const email = "drew@drew.mx";  // Using the actual email address
   const gravatarUrl = `https://gravatar.com/avatar/81db1417d343b4a2929be220a7853857?s=400&d=robohash&r=x`;
 
@@ -62,7 +61,7 @@ export const Footer = () => {
                 <div className="flex flex-col">
                   <h2 className="text-xl font-semibold mb-4">Hi, I'm drew..</h2>
                   <p className="text-muted-foreground font-light leading-relaxed">
-                    multiversX OG, validator, godfather of the mvx Guardian, EGLDHeist, and part of the team bringing you theFUCollective, creator of mxConsole, and more in the works.
+                    multiversX OG, validator, godfather of the mvx Guardian, EGLDHeist, part of theFUCollective crew, creator of mxConsole, with more in the works.
                     <br /><br />
                     I believe strongly in sovereignty, accountability, and altruactions.
                   </p>
