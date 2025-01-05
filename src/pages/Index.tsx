@@ -4,6 +4,7 @@ import { CategoryToggle } from "@/components/CategoryToggle";
 import { blockchainData } from "@/lib/blockchain-data";
 import { ScoreCategory } from "@/lib/types";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { RefreshCw } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -13,6 +14,7 @@ const Index = () => {
     "security",
     "scalability",
   ]);
+  const [trilemmaOnly, setTrilemmaOnly] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
   const { toast } = useToast();
 
@@ -33,6 +35,10 @@ const Index = () => {
   }, [selectedCategories, refreshKey]);
 
   const toggleCategory = (category: ScoreCategory) => {
+    if (trilemmaOnly && ["tps", "finalityTime", "activeValidators"].includes(category)) {
+      return;
+    }
+
     setSelectedCategories((prev) => {
       if (prev.includes(category)) {
         if (prev.length === 1) return prev;
@@ -40,6 +46,13 @@ const Index = () => {
       }
       return [...prev, category];
     });
+  };
+
+  const handleTrilemmaToggle = (checked: boolean) => {
+    setTrilemmaOnly(checked);
+    if (checked) {
+      setSelectedCategories(["decentralization", "security", "scalability"]);
+    }
   };
 
   const categories: ScoreCategory[] = [
@@ -111,7 +124,7 @@ const Index = () => {
             max score: {getMaxPossibleScore()} ({selectedCategories.length} categories selected)
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-4">
             {categories.map((category) => (
               <CategoryToggle
                 key={category}
@@ -121,6 +134,21 @@ const Index = () => {
                 onToggle={toggleCategory}
               />
             ))}
+          </div>
+
+          <div className="flex justify-end items-center gap-2 mb-8 opacity-80">
+            <label 
+              htmlFor="trilemma-toggle" 
+              className="text-sm text-muted-foreground cursor-pointer"
+            >
+              crypto trilemma only
+            </label>
+            <Checkbox
+              id="trilemma-toggle"
+              checked={trilemmaOnly}
+              onCheckedChange={handleTrilemmaToggle}
+              className="h-4 w-4 bg-[#f3f3f3] text-[#555555]"
+            />
           </div>
         </div>
 
