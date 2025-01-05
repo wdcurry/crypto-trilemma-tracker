@@ -56,7 +56,7 @@ export const Footer = () => {
             @theFUCollective
           </a>
         </p>
-        <div className="w-px h-8 bg-muted/50 mx-auto"></div>
+        <div className="h-px w-48 bg-muted/50 mx-auto mb-4"></div>
         <div className="flex items-center justify-center gap-4">
           <a 
             href="https://wallet.multiversx.com/unlock" 
