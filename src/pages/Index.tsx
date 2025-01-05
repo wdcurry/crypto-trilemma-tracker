@@ -108,7 +108,7 @@ const Index = () => {
             Compare blockchain platforms across key performance metrics
           </p>
           <p className="text-lg text-muted-foreground mb-12">
-            Current maximum score: {getMaxPossibleScore()} ({selectedCategories.length} categories selected)
+            max score: {getMaxPossibleScore()} ({selectedCategories.length} categories selected)
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
