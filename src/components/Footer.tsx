@@ -70,7 +70,7 @@ export const Footer = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="text-muted-foreground hover:text-primary"
+            className="text-muted-foreground hover:text-primary hover:bg-transparent"
             onClick={handleShare}
           >
             <Share2 className="w-4 h-4 mr-2" />
