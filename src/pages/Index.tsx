@@ -100,6 +100,10 @@ const Index = () => {
     }
   };
 
+  const isDisabled = (category: ScoreCategory) => {
+    return trilemmaOnly && ["tps", "finalityTime", "activeValidators"].includes(category);
+  };
+
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#1a1a1a_0%,#000000_100%)] p-8">
       <div className="max-w-7xl mx-auto">
@@ -132,6 +136,7 @@ const Index = () => {
                 displayName={getCategoryDisplayName(category)}
                 isSelected={selectedCategories.includes(category)}
                 onToggle={toggleCategory}
+                disabled={isDisabled(category)}
               />
             ))}
           </div>
