@@ -210,9 +210,14 @@ const Index = () => {
               </a>
             </p>
             <div className="w-px h-8 bg-muted/50 mx-auto"></div>
-            <p className="text-sm text-muted-foreground mt-4">
+            <a 
+              href="https://wallet.multiversx.com/unlock" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground mt-4 hover:text-primary transition-colors block"
+            >
               tips & coffee money to herotag @drew
-            </p>
+            </a>
           </div>
         </footer>
       </div>
