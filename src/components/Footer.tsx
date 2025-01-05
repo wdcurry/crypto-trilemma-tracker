@@ -57,7 +57,7 @@ export const Footer = () => {
           </a>
         </p>
         <div className="h-px w-48 bg-muted/50 mx-auto mb-4"></div>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-4 mb-4">
           <a 
             href="https://wallet.multiversx.com/unlock" 
             target="_blank" 
@@ -66,7 +66,7 @@ export const Footer = () => {
           >
             tips & coffee money to herotag @drew
           </a>
-          <div className="w-px h-8 bg-muted/50"></div>
+          <div className="h-px w-8 bg-muted/50 rotate-90"></div>
           <Button
             variant="ghost"
             size="sm"
