@@ -21,7 +21,7 @@ export const Footer = () => {
   };
 
   // Generate Gravatar URL using MD5 hash of email
-  const email = "68a599c78c73853004cc08f7af9fa0b4@drew.mx";
+  const email = "drew@drew.mx";  // Using the actual email address
   const gravatarUrl = `https://www.gravatar.com/avatar/${md5(email.trim().toLowerCase())}?s=200&d=retro`;
 
   return (
