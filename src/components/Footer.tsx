@@ -22,7 +22,7 @@ export const Footer = () => {
 
   // Generate Gravatar URL using MD5 hash of email
   const email = "drew@drew.mx";  // Using the actual email address
-  const gravatarUrl = `https://www.gravatar.com/avatar/${md5(email.trim().toLowerCase())}?s=200&d=retro`;
+  const gravatarUrl = `https://gravatar.com/avatar/81db1417d343b4a2929be220a7853857?s=400&d=robohash&r=x`;
 
   return (
     <footer className="mt-16 border-t border-muted pt-8">
