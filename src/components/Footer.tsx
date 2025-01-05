@@ -53,7 +53,7 @@ export const Footer = () => {
                     src="https://secure.gravatar.com/avatar/68a599c78c73853004cc08f7af9fa0b4?s=200&d=mp&r=g" 
                     alt="Drew's avatar"
                   />
-                  <AvatarFallback delayMs={600}>DC</AvatarFallback>
+                  <AvatarFallback>DC</AvatarFallback>
                 </Avatar>
                 <h2 className="text-xl font-semibold mb-4">About Drew</h2>
                 <p className="text-muted-foreground">Content coming soon...</p>
