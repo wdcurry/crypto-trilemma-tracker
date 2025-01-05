@@ -1,4 +1,5 @@
 import { Share2, X } from "lucide-react";
+import md5 from "md5";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -15,10 +16,13 @@ export const Footer = () => {
         url: window.location.href
       });
     } catch (err) {
-      // If Web Share API is not supported, copy to clipboard
       await navigator.clipboard.writeText(window.location.href);
     }
   };
+
+  // Generate Gravatar URL using MD5 hash of email
+  const email = "68a599c78c73853004cc08f7af9fa0b4@drew.mx";
+  const gravatarUrl = `https://www.gravatar.com/avatar/${md5(email.trim().toLowerCase())}?s=200&d=retro`;
 
   return (
     <footer className="mt-16 border-t border-muted pt-8">
@@ -50,7 +54,7 @@ export const Footer = () => {
               <div className="p-4 flex flex-col items-center">
                 <Avatar className="w-24 h-24 mb-4">
                   <AvatarImage 
-                    src="https://www.gravatar.com/avatar/68a599c78c73853004cc08f7af9fa0b4?s=200&d=retro" 
+                    src={gravatarUrl}
                     alt="Drew's avatar"
                   />
                   <AvatarFallback delayMs={600}>DC</AvatarFallback>
