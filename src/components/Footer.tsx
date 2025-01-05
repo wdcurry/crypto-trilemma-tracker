@@ -62,7 +62,7 @@ export const Footer = () => {
                 <div className="flex flex-col">
                   <h2 className="text-xl font-semibold mb-4">Hi, I'm drew..</h2>
                   <p className="text-muted-foreground font-light leading-relaxed">
-                    multiversX OG, validator, creator of mxConsole, EGLDHeist, and part of the team bringing you theFUCollective.
+                    multiversX OG, validator, godfather of the mvx Guardian, EGLDHeist, and part of the team bringing you theFUCollective, creator of mxConsole, and more in the works.
                     <br /><br />
                     I believe strongly in sovereignty, accountability, and altruactions.
                   </p>
