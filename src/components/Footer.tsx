@@ -5,6 +5,7 @@ import {
   DialogContent,
   DialogTrigger,
 } from "./ui/dialog";
+import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 
 export const Footer = () => {
   const handleShare = async () => {
@@ -46,7 +47,11 @@ export const Footer = () => {
               >
                 <X className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
               </Button>
-              <div className="p-4">
+              <div className="p-4 flex flex-col items-center">
+                <Avatar className="w-24 h-24 mb-4">
+                  <AvatarImage src="https://www.gravatar.com/avatar/00d40d17f9a214bce7aa3641fc1e4c6a?s=200" alt="Drew's avatar" />
+                  <AvatarFallback>DC</AvatarFallback>
+                </Avatar>
                 <h2 className="text-xl font-semibold mb-4">About Drew</h2>
                 <p className="text-muted-foreground">Content coming soon...</p>
               </div>
