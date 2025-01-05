@@ -50,7 +50,7 @@ export const Footer = () => {
               <div className="p-4 flex flex-col items-center">
                 <Avatar className="w-24 h-24 mb-4">
                   <AvatarImage 
-                    src="https://www.gravatar.com/avatar/c7d1e738c9adb9cb546c78cb0653e5d0?s=200&d=mp&r=g" 
+                    src="https://secure.gravatar.com/avatar/c7d1e738c9adb9cb546c78cb0653e5d0?s=200&d=mp&r=g" 
                     alt="Drew's avatar"
                   />
                   <AvatarFallback delayMs={600}>DC</AvatarFallback>
