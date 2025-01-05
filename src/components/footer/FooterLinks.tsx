@@ -68,6 +68,8 @@ export const FooterLinks = () => {
           <Share2 className="w-4 h-4 mr-2" />
           Share
         </Button>
+        <div className="h-4 w-px bg-muted/50"></div>
+        <span className="text-sm text-muted-foreground">version 0.1</span>
       </div>
     </div>
   );
