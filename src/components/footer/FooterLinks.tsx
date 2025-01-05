@@ -1,6 +1,7 @@
 import React from 'react';
 import { Share2 } from "lucide-react";
 import { Button } from "../ui/button";
+import { ProfileDialog } from "./ProfileDialog";
 
 export const FooterLinks = () => {
   const handleShare = async () => {
