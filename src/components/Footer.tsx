@@ -1,5 +1,10 @@
-import { Share2 } from "lucide-react";
+import { Share2, X } from "lucide-react";
 import { Button } from "./ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "./ui/dialog";
 
 export const Footer = () => {
   const handleShare = async () => {
@@ -28,7 +33,26 @@ export const Footer = () => {
       
       <div className="text-center text-muted-foreground py-6 border-t border-muted">
         <p className="text-sm mb-4">
-          Made with ❤️ by drew for the mofos at{" "}
+          Made with ❤️{" "}
+          <Dialog>
+            <DialogTrigger asChild>
+              <button className="text-primary hover:text-primary-light transition-colors">by drew</button>
+            </DialogTrigger>
+            <DialogContent className="glass-card border-primary/20">
+              <Button 
+                variant="ghost" 
+                className="absolute right-4 top-4 p-0 h-auto hover:bg-transparent"
+                aria-label="Close"
+              >
+                <X className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
+              </Button>
+              <div className="p-4">
+                <h2 className="text-xl font-semibold mb-4">About Drew</h2>
+                <p className="text-muted-foreground">Content coming soon...</p>
+              </div>
+            </DialogContent>
+          </Dialog>
+          {" "}for the mofos at{" "}
           <a 
             href="https://twitter.com/ApeStaking" 
             target="_blank" 
