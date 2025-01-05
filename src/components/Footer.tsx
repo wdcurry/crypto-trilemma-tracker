@@ -49,7 +49,7 @@ export const Footer = () => {
               </Button>
               <div className="p-4 flex flex-col items-center">
                 <Avatar className="w-24 h-24 mb-4">
-                  <AvatarImage src="https://www.gravatar.com/avatar/00d40d17f9a214bce7aa3641fc1e4c6a?s=200" alt="Drew's avatar" />
+                  <AvatarImage src="https://www.gravatar.com/avatar/c7d1e738c9adb9cb546c78cb0653e5d0?s=200" alt="Drew's avatar" />
                   <AvatarFallback>DC</AvatarFallback>
                 </Avatar>
                 <h2 className="text-xl font-semibold mb-4">About Drew</h2>
