@@ -147,7 +147,7 @@ const Index = () => {
           </div>
           
           <div className="text-center text-muted-foreground py-6 border-t border-muted">
-            <p className="text-sm">
+            <p className="text-sm mb-4">
               Made with ❤️ by drew for the mofos at{" "}
               <a 
                 href="https://twitter.com/ApeStaking" 
@@ -175,6 +175,10 @@ const Index = () => {
               >
                 @theFUCollective
               </a>
+            </p>
+            <div className="w-px h-8 bg-muted/50 mx-auto"></div>
+            <p className="text-sm text-muted-foreground mt-4">
+              tips & coffee money to herotag @drew
             </p>
           </div>
         </footer>
