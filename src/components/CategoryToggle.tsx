@@ -21,8 +21,8 @@ export const CategoryToggle = ({
     <Button
       variant="outline"
       className={cn(
-        "border-2 border-primary/20 hover:border-primary/40 hover:bg-black/60 transition-all duration-300 px-6 py-2 text-sm font-medium bg-black/40 backdrop-blur-sm",
-        isSelected && "bg-primary text-secondary border-primary hover:bg-primary hover:border-primary",
+        "border-2 border-primary/20 hover:border-primary/40 hover:bg-black/80 hover:text-primary transition-all duration-300 px-6 py-2 text-sm font-medium bg-black/40 backdrop-blur-sm",
+        isSelected && "bg-primary text-secondary border-primary hover:bg-primary hover:border-primary hover:text-secondary",
         disabled && "opacity-50 cursor-not-allowed hover:border-primary/20 hover:bg-transparent"
       )}
       onClick={() => onToggle(category)}
